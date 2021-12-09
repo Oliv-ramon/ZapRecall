@@ -1,5 +1,4 @@
 .app {
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -8,33 +7,67 @@
 }
 
 .start {
-    height: 60%;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.start-logo {
+.start .start-logo {
     height: 60%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
 }
 
-.start-logo ion-icon {
-    font-size: 180px;
-
-    color:#ffef61;
+.start .start-logo img {
+    width: 171px;
+    height: 217px;
 }
 
-.start-logo span  {
+.start .start-logo span  {
     font-family: merriweather;
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
+}
+
+.running-top {
+    width: 100%;
+}
+
+.running-top .start-logo {
+    height: 55px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.running-top .start-logo img {
+    width: 43px;
+    height: 54px;
+}
+
+.running-top .start-logo span  {
+    font-family: merriweather;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.buttons {
+    padding-top: 15vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .start .button {
@@ -63,4 +96,58 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 23px;
+}
+
+.card {
+    width: 45vh;
+    height: 70vh;
+    margin-top: 5vh;
+
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-top {
+    padding: 12px 12px 5vh 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-top .tittle {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.card-top .counter {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;  
+}
+
+.question {
+    text-align: center;
+    word-break: normal;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+}
+
+.card-footer {
+    padding: 12px;
+    font-size: 40px;
+
+    display: flex;
+    justify-content: space-between;
 }

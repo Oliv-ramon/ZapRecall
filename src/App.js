@@ -1,16 +1,15 @@
 import {useState} from "react";
 import Start from "./Start";
+import Running from "./Running";
 
-const about = {react: "React"}
+const abouts = ["React"]
 
 export default function App() {
-    const {react} = about
-
-    const [appContent, setAppContent] = useState(<Start about={react}/>);
 
     return (
         <main className="app">
-            {appContent}
+           {/* {<Start abouts={abouts}/>} */}
+            <Running/>
         </main>
     )
 }
