@@ -98,7 +98,7 @@
     line-height: 23px;
 }
 
-.card {
+.card, .face{
     width: 45vh;
     height: 70vh;
     margin-top: 5vh;
@@ -109,6 +109,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    position: relative;
 }
 
 .card-top {
@@ -119,21 +121,34 @@
     align-items: center;
 }
 
-.card-top .tittle {
+.card-top span {
+    max-width: 150px;
+
     font-family: Roboto;
     font-size: 12px;
     font-weight: 700;
     line-height: 14px;
+    text-align: center;
+
+    color: #fff;
+}
+
+.card-top .tittle {
+    color: #000;
 }
 
 .card-top .counter {
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
-    line-height: 21px;  
+    line-height: 21px; 
+    
+    color: #000;
 }
 
 .question {
+    padding: 0 40px;
+
     text-align: center;
     word-break: normal;
 
@@ -150,4 +165,27 @@
 
     display: flex;
     justify-content: space-between;
+}
+
+.face {
+    margin: 0;
+    backface-visibility: hidden;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+  
+.front {
+    transform: rotateY(180deg);
+}
+  
+.face.front {
+    transform: rotateY(0deg);
+}
+  
+.face.back {
+    transform: rotateY(-180deg);
 }
