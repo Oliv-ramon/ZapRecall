@@ -1,6 +1,6 @@
-export default function StartLogo({setScreen}) {
+export default function StartLogo() {
     return (
-    <section className="start-logo" onClick={() => setScreen(true)}>
+    <section className="start-logo">
         <img src="./assets/Vector.svg"alt="imagem de um raio"/>
         <span>ZapRecall</span>
     </section>
