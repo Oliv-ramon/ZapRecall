@@ -2,14 +2,16 @@ import {useState} from "react";
 import Start from "./Start";
 import Running from "./Running";
 
-const abouts = ["React"]
 
 export default function App() {
+    const decks = [{name: "React", card:""}];
+
+    const [screen, setScreen] = useState(true);
 
     return (
         <main className="app">
-           {/* {<Start abouts={abouts}/>} */}
-            <Running/>
+           {screen ? <Start deks={decks} setScreen={setScreen}/> : <Running/>}
+            {/* <Running/> */}
         </main>
     )
 }

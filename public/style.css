@@ -49,6 +49,10 @@
     gap: 8px;
 }
 
+.running-top .start-logo:hover {
+    cursor: pointer;
+}
+
 .running-top .start-logo img {
     width: 43px;
     height: 54px;
@@ -82,6 +86,10 @@
     justify-content: center;
     align-items: center;
     gap: 6px;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .button ion-icon {
@@ -218,6 +226,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card-footer li:hover {
+    cursor: pointer;
 }
 
 li.black  {

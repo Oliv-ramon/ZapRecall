@@ -8,8 +8,8 @@ export default function Running() {
             <header className="running-top">
                 <StartLogo/>
             </header>
-            {/* <Card/> */}
-            <FinalScreen/>
+            <Card/>
+            {/* <FinalScreen/> */}
         </>
     )
 }
