@@ -1,5 +1,4 @@
 .app {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +102,6 @@
     height: 75vh;
     margin-top: 5vh;
 
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
     border-radius: 12px;
 
     display: flex;
@@ -116,11 +114,13 @@
 .face {
     margin: 0;
     backface-visibility: hidden;
+
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
   
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.2s;
+    transition: all 0.3s;
     transition-timing-function: ease-out;
     transform-style: preserve-3d;
 }
@@ -234,5 +234,31 @@ li.green  {
 
 li.yellow  {
     border-color: #FFEF61;
+}
+
+.final-screen {
+    padding-top: 200px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.final-screen span {
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+}
+
+.final-screen p {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+
+    word-break: normal;
 }
 
