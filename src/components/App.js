@@ -4,14 +4,20 @@ import Running from "./Running";
 
 
 export default function App() {
-    const decks = [{name: "React", card:""}];
+    const decks = [
+        {name: "React", cards: [
+            {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
+            {question: "O React é __", answer: "uma biblioteca JavaScript para construção de interfaces"},
+            {question: "Componentes devem iniciar com __", answer: "letra maiúscula"}
+        ]}];
 
     const [screen, setScreen] = useState(true);
 
+    const [deck, setDeck] = useState([])
+
     return (
         <main className="app">
-           {screen ? <Start deks={decks} setScreen={setScreen}/> : <Running/>}
-            {/* <Running/> */}
+           {screen ? <Start deks={decks} setScreen={setScreen} setDeck={setDeck}/> : <Running deck={deck}/>}
         </main>
     )
 }

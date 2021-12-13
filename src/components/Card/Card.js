@@ -3,15 +3,9 @@ import returnClass from "../../utils/returnClass.js";
 import Front from "./Front.js";
 import Back from "./Back.js";
 
-export default function Card() {
+export default function Card({deck: {cards}}) {
     const [cardsId, setCardsId] = useState(0)
     const [faceState, setFaceState] = useState(true);
-
-    const cards = [
-        {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
-        {question: "O React é __", answer: "uma biblioteca JavaScript para construção de interfaces"},
-        {question: "Componentes devem iniciar com __", answer: "letra maiúscula"}
-    ]
 
     function nextCard() {
         setCardsId(cardsId+1)
