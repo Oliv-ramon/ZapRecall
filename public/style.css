@@ -132,6 +132,22 @@
     transition-timing-function: ease-out;
     transform-style: preserve-3d;
 }
+
+.face.black {
+    border: 5px solid #000000;
+}
+
+.face.red{
+    border: 5px solid #F74848;
+}
+
+.face.green  {
+    border: 5px solid #62DB38;
+}
+
+.face.yellow{
+    border: 5px solid #FFEF61;
+}
   
 .front {
     transform: rotateY(180deg);
@@ -228,23 +244,23 @@
     justify-content: center;
 }
 
-.card-footer li:hover {
+.card-footer li:hover, ion-icon:hover{
     cursor: pointer;
 }
 
-li.black  {
+li.black, .face.black {
     border-color: #000000;
 }
 
-li.red  {
-    border: 3px solid #F74848;
+li.red, .face.red{
+    border-color: #F74848;
 }
 
-li.green  {
+li.green, .face.green  {
     border-color: #62DB38;
 }
 
-li.yellow  {
+li.yellow, .face.yellow{
     border-color: #FFEF61;
 }
 
