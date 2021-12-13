@@ -6,12 +6,11 @@ import Back from "./Back.js";
 export default function Card({deck: {cards}, setHaveCards}) {
     const [cardsId, setCardsId] = useState(0)
     const [faceState, setFaceState] = useState(true);
-    const [faceClasses, setFaceClasses] = useState()
+    const [borderClass, setBorderClass] = useState("rgb(0 0 0 / 12%)")
 
-    function nextCard(className) {
+    function putBorder(className) {
         if (cardsId < cards.length-1) {
-            setFaceClasses(className)
-            setCardsId(cardsId+1)
+            setBorderClass(className)
             setFaceState(true)
         } else {
             setHaveCards(false)
@@ -20,12 +19,12 @@ export default function Card({deck: {cards}, setHaveCards}) {
 
     return (
         <section className="card">
-            <Front side={returnClass(faceState)} faceClasses={faceClasses}>
-                {cardsId}{setFaceState}{cards}
+            <Front side={returnClass(faceState)} borderClass={borderClass}>
+                {cardsId}{{setFaceState, setCardsId}}{cards}
             </Front>
 
-            <Back side={returnClass(!faceState)} faceClasses={faceClasses}>
-                {cardsId}{nextCard}{cards}
+            <Back side={returnClass(!faceState)} borderClass={borderClass}>
+                {cardsId}{{setFaceState, putBorder}}{cards}
             </Back>
         </section>
     )
