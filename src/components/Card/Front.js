@@ -22,7 +22,7 @@ export default function Front({side, borderClass, children: [cardsId, {setFaceSt
             <section className="question">{question}</section>
             <footer className="card-footer">
                 <span></span>
-                <ion-icon name="arrow-undo" onClick={() => turnCard(first)}></ion-icon>
+                <ion-icon name="arrow-undo" onClick={() => turnCard(first)} data-identifier="arrow"></ion-icon>
             </footer>
         </section>
     )

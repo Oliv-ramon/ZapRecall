@@ -20,7 +20,7 @@ function Button({deck, setScreen, setDeck}) {
     }
 
     return (
-        <div className="button" onClick={() => selectDeck(deck)}>
+        <div className="button" onClick={() => selectDeck(deck)} data-identifier="start-zap-recall">
             <span>Praticar</span><span>{deck.name}</span>
             <ion-icon name="play-forward-sharp"></ion-icon>
         </div>

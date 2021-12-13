@@ -10,7 +10,7 @@ export default function Card({deck: {cards}, setHaveCards, setHaveMistake}) {
 
     function respond(className) {
         if (className === "red") setHaveMistake(true)
-        
+
         if (cardsId < cards.length-1) {
             setBorderClass(className)
             setFaceState(true)
@@ -20,7 +20,7 @@ export default function Card({deck: {cards}, setHaveCards, setHaveMistake}) {
     }
 
     return (
-        <section className="card">
+        <section className="card" data-identifier="flashcard">
             <Front side={returnClass(faceState)} borderClass={borderClass}>
                 {cardsId}{{setFaceState, setCardsId}}{cards}
             </Front>
