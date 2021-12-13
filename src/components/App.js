@@ -12,12 +12,12 @@ export default function App() {
         ]}];
 
     const [screen, setScreen] = useState(true);
-
     const [deck, setDeck] = useState([])
+    const [zapGoal, setZapGoal] = useState(undefined)
 
     return (
         <main className="app">
-           {screen ? <Start deks={decks} setScreen={setScreen} setDeck={setDeck}/> : <Running deck={deck}/>}
+           {screen ? <Start deks={decks} setScreen={setScreen} setDeck={setDeck} zapGoal={zapGoal} setZapGoal={setZapGoal}/> : <Running deck={deck} setScreen={setScreen} zapGoal={zapGoal}/>}
         </main>
     )
 }

@@ -1,12 +1,15 @@
 import StartLogo from "./StartLogo";
 
-export default function Start ({deks, setScreen, setDeck}) {
-    
+export default function Start ({deks, setScreen, setDeck, zapGoal, setZapGoal}) {
+
     return (
         <section className="start">
             <StartLogo/>
             <section className="buttons">
-            {deks.map((deck) => <Button deck={deck} setScreen={setScreen} setDeck={setDeck}/>)}
+                <input placeholder="Sua meta de zaps (mínimo 1)" onChange={({target: {value}}) => 
+                {setZapGoal(value)
+                console.log(zapGoal)}} value={zapGoal}></input>
+                {deks.map((deck) => <Button deck={deck} setScreen={setScreen} setDeck={setDeck}/>)}
             </section>
         </section>
     )

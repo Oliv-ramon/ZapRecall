@@ -3,7 +3,7 @@ import StartLogo from "./StartLogo"
 import Card from "./Card/Card"
 import FinalScreen from "./FinalScreen"
 
-export default function Running({deck}) {
+export default function Running({deck, setScreen, zapGoal}) {
 
     const [haveCards, setHaveCards] = useState(true)
     const [haveMistake, setHaveMistake] = useState(false)
@@ -11,9 +11,9 @@ export default function Running({deck}) {
     return (
         <>
             <header className="running-top">
-                <StartLogo/>
+                <StartLogo setScreen={setScreen}/>
             </header>
-            {haveCards ? <Card deck={deck} setHaveCards={setHaveCards} setHaveMistake={setHaveMistake}/> : <FinalScreen haveMistake={haveMistake}/>}
+            {haveCards ? <Card deck={deck} setHaveCards={setHaveCards} setHaveMistake={setHaveMistake} zapGoal={zapGoal}/> : <FinalScreen haveMistake={haveMistake}/>}
         </>
     )
 }
