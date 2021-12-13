@@ -1,4 +1,4 @@
-export default function FinalScreen(params) {
+export default function FinalScreen({haveMistake}) {
     function Congrats() {
         return (
             <>
@@ -20,7 +20,7 @@ export default function FinalScreen(params) {
 
         return (
             <section className="final-screen">
-                {1>2 ? <Congrats/>: <NotThisTime/>}
+                {!haveMistake ? <Congrats/>: <NotThisTime/>}
             </section>
         )  
 }

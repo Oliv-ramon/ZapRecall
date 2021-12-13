@@ -3,12 +3,14 @@ import returnClass from "../../utils/returnClass.js";
 import Front from "./Front.js";
 import Back from "./Back.js";
 
-export default function Card({deck: {cards}, setHaveCards}) {
+export default function Card({deck: {cards}, setHaveCards, setHaveMistake}) {
     const [cardsId, setCardsId] = useState(0)
     const [faceState, setFaceState] = useState(true);
     const [borderClass, setBorderClass] = useState("rgb(0 0 0 / 12%)")
 
-    function putBorder(className) {
+    function respond(className) {
+        if (className === "red") setHaveMistake(true)
+        
         if (cardsId < cards.length-1) {
             setBorderClass(className)
             setFaceState(true)
@@ -24,7 +26,7 @@ export default function Card({deck: {cards}, setHaveCards}) {
             </Front>
 
             <Back side={returnClass(!faceState)} borderClass={borderClass}>
-                {cardsId}{{setFaceState, putBorder}}{cards}
+                {cardsId}{respond}{cards}
             </Back>
         </section>
     )

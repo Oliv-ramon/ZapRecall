@@ -1,6 +1,6 @@
 import Top from "./Top"
 
-export default function Back({side, borderClass, children: [cardsId, {setFaceState, putBorder}, cards]}) {
+export default function Back({side, borderClass, children: [cardsId, respond, cards]}) {
     
     const {question, answer} = cards[cardsId]
 
@@ -17,7 +17,7 @@ export default function Back({side, borderClass, children: [cardsId, {setFaceSta
             <section className="question">{answer}</section>
             <footer className="card-footer">
                 <ul>
-                    {situations.map(({situation, className}) => <li className={className} onClick={() => putBorder(className)}>{situation}</li>)}
+                    {situations.map(({situation, className}) => <li className={className} onClick={() => respond(className)}>{situation}</li>)}
                 </ul>
             </footer>
         </section>
